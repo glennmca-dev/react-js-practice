@@ -5,10 +5,15 @@ import Order from "./Order";
 import sampleFishes from "../sample-fishes";
 import Fish from "./Fish";
 import base from "../base";
+import propTypes from "prop-types";
 class App extends React.Component {
   state = {
     fishes: {},
     order: {},
+  };
+
+  static propTypes = {
+    match: propTypes.object,
   };
 
   componentDidMount() {
